@@ -1,0 +1,10 @@
+import {useMemo,useEffect,useState} from 'react';
+import './index.module.scss'
+const %name% = () => {
+    return (
+        <>
+            %name%
+        </>
+    )
+}
+export default %name%
