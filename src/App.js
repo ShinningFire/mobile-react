@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import ScrollToTop from './components/ScrollToTop'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import routerConfig from './routerConfig'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+          <ScrollToTop>
+              <Switch>
+                {
+                  routerConfig.map((items,index) => {
+                    return (
+                      <Route 
+                      key={index}
+                      exact={items.exact}
+                      path={items.path} 
+                      component={items.component}
+                      />
+                    )
+                  })
+                }
+              </Switch>
+          </ScrollToTop>
+        </Router>
     </div>
   );
 }

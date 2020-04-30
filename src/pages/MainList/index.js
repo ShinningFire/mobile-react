@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-class TopBar extends Component {
+class MainList extends Component {
     constructor() {
         this.state = {
 
@@ -8,9 +8,9 @@ class TopBar extends Component {
     render() {
         return (
             <>
-            TopBar
+            MainList
             </>
         )
     }
 }
-export default TopBar
+export default MainList

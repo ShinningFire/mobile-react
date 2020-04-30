@@ -94,10 +94,10 @@ function common(targetPath,filePath,pageName) {
         console.log(successing('模块创建成功！'))
     })
 }
-check().then(res => {
+check()
+.then(res => {
     if(res.createType === 'normal') common(normal(res.pageName),res.filePath,res.pageName)
     if(res.createType === 'component') common(component(res.pageName),res.filePath,res.pageName)
-    process.exit();
 }).catch(error => {
     if(error.warning === 'warning') warn(error.data)
     if(error.warning === 'error') console.log(erroring(error.data))

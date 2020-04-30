@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
-class ScrollBar extends Component {
-    constructor() {
+class Index extends Component {
+    constructor(props) {
+        super(props)
         this.state = {
 
         }
@@ -8,9 +9,9 @@ class ScrollBar extends Component {
     render() {
         return (
             <>
-            ScrollBar
+            Index
             </>
         )
     }
 }
-export default ScrollBar
+export default Index
